@@ -11,5 +11,4 @@ RUN sudo su - -c "R -q -e \"install.packages('maps', repos='http://cran.rstudio.
 VOLUME ["/var/log:/var/log/shiny-server","/elastic-node/r-data:/srv/shiny-server -v /var/log:/var/log/shiny-server"]
 EXPOSE 3838
 WORKDIR /shiny-server
-ENTRYPOINT /bin/sh
-CMD /bin/shiny-server
+ENTRYPOINT bin/shiny-server
